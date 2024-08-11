@@ -15,8 +15,8 @@ cd Super-Clock-Love2D
 love .
 ```
 # Controls
-1 to 6 - Themes and Layouts
-c - Toggles Color mode.
-b - Toggles Big Mode.
-Space - Displays Time in Title for 5 seconds.
+1 to 6 - Themes and Layouts. \
+c - Toggles Color mode. \
+b - Toggles Big Mode. \
+Space - Displays Time in Title for 5 seconds. \
 Escape - Close Clock.
