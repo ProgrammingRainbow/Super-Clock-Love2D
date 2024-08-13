@@ -3,7 +3,7 @@ local function setLayout(self, layout)
         self._layout = 1
         love.window.setMode(
             self._size * 6 + self._bsize + self._ssize * 2,
-            self._size * 4 + self._bsize
+            self._bsize + self._size * 4
         )
 
         self._h_rects = {
@@ -77,10 +77,9 @@ local function setLayout(self, layout)
     elseif layout == 2 then
         self._layout = 2
         love.window.setMode(
-            self._size * 3 + self._bsize + self._ssize * 2,
+            self._bsize + self._size * 3 + self._ssize * 2,
             self._size * 8 + self._bsize
         )
-
         self._h_rects = {
             { self._bsize, self._bsize },
             { self._bsize, self._size + self._bsize },
@@ -159,7 +158,7 @@ local function setLayout(self, layout)
         self._layout = 3
         love.window.setMode(
             self._size * 8 + self._bsize,
-            self._size * 3 + self._bsize + self._ssize * 2
+            self._bsize + self._size * 3 + self._ssize * 2
         )
 
         self._h_rects = {

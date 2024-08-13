@@ -1,18 +1,18 @@
-local FONT_SIZE = 36
-local DIGIT = 36
-local BORDER = 4
+local FONT_SIZE = 72
+local DIGIT = 72
+local BORDER = 8
 local SIZE = DIGIT + BORDER
-local SEPERATOR = 18
+local SEPERATOR = 36
 local TITLE = "Super Clock"
 
 local Clock = {
     _timer = 0,
     _duration = 5,
     _show_time = false,
+    _theme = 1,
 }
 
 function Clock:load()
-    self:setTheme(1)
     self:toggleColor()
 
     local font = love.graphics.newFont("fonts/freesansbold.ttf", FONT_SIZE)
@@ -51,11 +51,11 @@ function Clock:load()
         { SIZE * 2 + BORDER + SEPERATOR * 2, SIZE * 7 + BORDER },
     }
 
+    love.window.setMode(BORDER + SIZE * 3 + SEPERATOR * 2, SIZE * 8 + BORDER)
+
     self.seconds = { 0, 0, 0, 0, 0, 0, 0, 0 }
     self.minutes = { 0, 0, 0, 0, 0, 0, 0, 0 }
     self.hours = { 0, 0, 0, 0, 0, 0, 0, 0 }
-
-    love.window.setMode(SIZE * 3 + BORDER + SEPERATOR * 2, SIZE * 8 + BORDER)
 end
 
 function Clock:showTime()

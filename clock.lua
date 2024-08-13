@@ -9,7 +9,7 @@ local Clock = {
     _timer = 0,
     _duration = 5,
     _show_time = false,
-    _color = true,
+    _color = false,
     _layout = 1,
     _theme = 1,
 }

@@ -1,7 +1,7 @@
-local DIGIT = 36
-local BORDER = 4
+local DIGIT = 72
+local BORDER = 8
 local SIZE = DIGIT + BORDER
-local SEPERATOR = 18
+local SEPERATOR = 36
 local TITLE = "Super Clock"
 
 local Clock = {
@@ -44,11 +44,11 @@ function Clock:load()
         { SIZE * 2 + BORDER + SEPERATOR * 2, SIZE * 7 + BORDER },
     }
 
+    love.window.setMode(BORDER + SIZE * 3 + SEPERATOR * 2, SIZE * 8 + BORDER)
+
     self.seconds = { 0, 0, 0, 0, 0, 0, 0, 0 }
     self.minutes = { 0, 0, 0, 0, 0, 0, 0, 0 }
     self.hours = { 0, 0, 0, 0, 0, 0, 0, 0 }
-
-    love.window.setMode(SIZE * 3 + BORDER + SEPERATOR * 2, SIZE * 8 + BORDER)
 end
 
 function Clock:showTime()
@@ -104,7 +104,9 @@ function Clock:draw()
                 DIGIT
             )
         end
+    end
 
+    for i = 1, 8 do
         if self.minutes[i] == 1 then
             love.graphics.rectangle(
                 "fill",
@@ -114,7 +116,9 @@ function Clock:draw()
                 DIGIT
             )
         end
+    end
 
+    for i = 1, 8 do
         if self.seconds[i] == 1 then
             love.graphics.rectangle(
                 "fill",

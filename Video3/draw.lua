@@ -4,7 +4,6 @@ local function draw(self)
     for i = 1, 8 do
         if self.hours[i] == 1 then
             love.graphics.setColor(self.colors[i])
-
             if self._theme == 1 then
                 love.graphics.rectangle(
                     "fill",
@@ -22,7 +21,6 @@ local function draw(self)
             end
         else
             love.graphics.setColor(self.colors[9])
-
             if self._theme == 1 then
                 love.graphics.rectangle(
                     "fill",
@@ -39,10 +37,11 @@ local function draw(self)
                 )
             end
         end
+    end
 
+    for i = 1, 8 do
         if self.minutes[i] == 1 then
             love.graphics.setColor(self.colors[i])
-
             if self._theme == 1 then
                 love.graphics.rectangle(
                     "fill",
@@ -60,7 +59,6 @@ local function draw(self)
             end
         else
             love.graphics.setColor(self.colors[9])
-
             if self._theme == 1 then
                 love.graphics.rectangle(
                     "fill",
@@ -77,10 +75,11 @@ local function draw(self)
                 )
             end
         end
+    end
 
+    for i = 1, 8 do
         if self.seconds[i] == 1 then
             love.graphics.setColor(self.colors[i])
-
             if self._theme == 1 then
                 love.graphics.rectangle(
                     "fill",
@@ -98,7 +97,6 @@ local function draw(self)
             end
         else
             love.graphics.setColor(self.colors[9])
-
             if self._theme == 1 then
                 love.graphics.rectangle(
                     "fill",
